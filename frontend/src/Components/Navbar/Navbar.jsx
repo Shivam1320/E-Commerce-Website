@@ -4,6 +4,7 @@ import './Navbar.css'
 
 import logo from '../Assets/logo.png';
 import cart_icon from '../Assets/cart_icon.png';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -11,8 +12,8 @@ const Navbar = () => {
     <div className='navbar'>
         {/* navbar logo */}
         <div className="nav-logo">
-            <img src={logo} alt="" />
-            <p>Multimart</p>
+        <Link to ='/home' ><img src={logo} alt="" /></Link>
+        <Link to ='/home' style={{textDecoration: 'none'}}><p>jiomart</p></Link>
         </div>
 
         {/* navbar search bar */}
@@ -23,8 +24,8 @@ const Navbar = () => {
 
         {/* login and cart button  */}
         <div className='nav-login-cart'>
-            <button>Login</button>
-            <img src={cart_icon} alt="" />
+            <Link to ='/login'><button>Login</button></Link>
+            <Link to ='/cart'><img src={cart_icon} alt="" /></Link>
             <div className='nav-cart-count'>0</div>
         </div>
     </div>
